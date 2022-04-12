@@ -1,0 +1,101 @@
+html,
+body {
+  min-height: 100%;  
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+  font-family: roboto, sans-serif;
+  
+}
+
+div.log-pict {
+  background: url('../img/learning.png');
+  display: table-cell;
+  width: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Quicksand, sans-serif;
+}
+
+.login {
+  padding: 5px 60px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.e-letter {
+    /*position: absolute;*/
+    display: inline-block;
+    font-size: 40px;
+    box-sizing: content-box;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #c49c4c;
+    text-shadow: 1px 1px 3px black;
+    transform: rotate(-25deg);
+    left: -10p/*x;
+    top: -15p*/x;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  display: inline;
+  margin-left: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #555;
+}
+
+.menu a:hover {
+  color: #F63E02;
+  text-decoration: none;
+}
