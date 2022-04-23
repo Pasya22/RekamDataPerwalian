@@ -62,7 +62,21 @@ class Welcome extends CI_Controller
 		// $npm = $this->MSudi->GetData('t_tracking')->result();
 		$npm = $this->uri->segment(3);
 		$data['detail'] = $this->MSudi->GetDataWhere('t_tracking', 'npm', $npm)->row();
-		$data['tampil'] = $this->MSudi->nilai('nilai');
+		$data['tampil'] = $this->MSudi->GetDataWhere('nilai', 'npm', $npm)->result();
+		$data['title'] = 'Data Matakuliah';
+		$this->load->view('temp/header', $data);
+		$data['content'] = 'VBlank';
+		$this->load->view('Detail/VDetail', $data);
+		$this->load->view('temp/footer', $data);
+		// $this->load->view('Tracking/VTracking', $data);
+
+	}
+	public function Push()
+	{
+		// $npm = $this->MSudi->GetData('t_tracking')->result();
+		$kd_matkul = $this->uri->segment(3);
+		$data['push'] = $this->MSudi->GetDataWhere('matkul', 'kd_matkul', $kd_matkul)->row();
+		// $data['tampil'] = $this->MSudi->GetDataWhere('nilai', 'kd_matkul', $kd_matkul)->result();
 		$data['title'] = 'Data Matakuliah';
 		$this->load->view('temp/header', $data);
 		$data['content'] = 'VBlank';

@@ -35,10 +35,16 @@ class MSudi extends CI_Model
         $query = $this->db->query(" SELECT * FROM t_tracking WHERE tahun_masuk = '2018/2019' GROUP BY npm");
         return $query->result();
     }
-    function nilai()
+    // function nilai()
+    // {
+    //     $query = $this->db->query(" SELECT * FROM nilai WHERE npm  GROUP BY npm");
+    //     return $query->result();
+    // }
+    function nilai($tabel, $id, $npm)
     {
-        $query = $this->db->query(" SELECT * FROM nilai WHERE npm = '15180034'  GROUP BY id");
-        return $query->result();
+        $this->db->where($id, $npm);
+        $query = $this->db->get($tabel);
+        return $query;
     }
 
     // function tampil_data($vtanggal)

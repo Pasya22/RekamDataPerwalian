@@ -67,7 +67,7 @@
                 <tr>
                     <th>No.</th>
                     <th>Kode matakuliah</th>
-                    <th>NPM</th>
+                    <!-- <th>NPM</th> -->
                     <th>Nilai</th>
                     <!-- <th>Kode Kelas</th> -->
                     <th>action</th>
@@ -86,22 +86,26 @@
                     <td>
                         <?= $rm->kd_matkul; ?>
                     </td>
-                    <td>
-                        <?= $rm->npm; ?>
-                    </td>
+
                     <td>
                         <?= $rm->hm; ?>
                     </td>
                     <td>
-                        <a class="btn btn-info" href="<?= site_url('Welcome/Push/') . $rm->npm; ?>">PUSH</a>
+                        <?php if ($rm->hm == "T") : ?>
+                        <a class="btn btn-warning" href="<?= site_url('Welcome/Push/') . $rm->kd_matkul; ?>">Push</a>
+
+                        <?php endif ?>
+
                     </td>
                 </tr>
+
                 <?php } ?>
             </tbody>
             </tbody>
 
         </table>
-        <div class="bottom_shadow"></div>
+        <div class=" bottom_shadow">
+        </div>
     </div>
 </div>
 </div>
